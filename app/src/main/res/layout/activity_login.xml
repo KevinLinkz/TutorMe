@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
-<!--    tools:context=".MainActivity"-->
-<!--    tools:showIn="@layout/activity_main">-->
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:orientation="vertical"
     android:gravity="center"
-    android:orientation="vertical" >
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activity.LoginActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/tvLoginLabel"
         android:text="Login"
         android:textSize="24dp"
         android:textStyle="bold"/>
@@ -26,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:hint="Email"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -47,8 +43,6 @@
         android:layout_height="wrap_content"
         android:text="SIGN UP"
         android:textSize="15dp"
-        android:id="@+id/lnkSignUp"
-        />
-</LinearLayout>
+        android:id="@+id/lnkSignUp"/>
 
-</RelativeLayout>
+</LinearLayout>
