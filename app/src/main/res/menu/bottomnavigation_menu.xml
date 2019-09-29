@@ -5,17 +5,22 @@
         android:icon="@drawable/ic_home"
         android:title="@string/home" />
     <item
-        android:id="@+id/search_menu"
-        android:icon="@drawable/ic_search"
-        android:title="@string/search" />
+        android:id="@+id/schedule_menu"
+        android:icon="@drawable/ic_schedule"
+        android:title="@string/schedule" />
 
     <item
-        android:id="@+id/favorite_menu"
-        android:icon="@drawable/ic_favorite"
-        android:title="@string/favorite" />
+        android:id="@+id/absent_menu"
+        android:icon="@drawable/ic_qr_code"
+        android:title="@string/absent" />
     <item
-        android:id="@+id/account_menu"
+        android:id="@+id/inbox_menu"
+        android:icon="@drawable/ic_inbox"
+        android:title="@string/inbox" />
+
+    <item
+        android:id="@+id/profile_menu"
         android:icon="@drawable/ic_account"
-        android:title="@string/account" />
+        android:title="@string/profile" />
 
 </menu>
