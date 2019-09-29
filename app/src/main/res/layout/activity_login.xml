@@ -47,7 +47,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SIGN UP"
+        android:text="Sign Up"
         android:textSize="15dp"
         android:id="@+id/lnkSignUp"
         />
