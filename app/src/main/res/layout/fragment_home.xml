@@ -12,9 +12,7 @@
         android:id="@+id/srcHome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_margin="10dp"
         android:background="@drawable/style_search"
         android:iconifiedByDefault="false"
         android:queryHint="Search Me :)" />
@@ -206,9 +204,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="0dp"
                         android:text="2-4 PM"
-                        android:textSize="18dp"
-
-                        />
+                        android:textSize="18dp" />
 
                     <Button
                         android:id="@+id/btn_attendance"
@@ -219,9 +215,7 @@
                         android:layout_marginRight="20dp"
                         android:background="@android:color/holo_green_dark"
                         android:text="Attendance"
-                        android:textAlignment="center"
-
-                        />
+                        android:textAlignment="center" />
 
                     <Button
                         android:id="@+id/btn_reschedule"
@@ -233,7 +227,6 @@
                         android:layout_marginRight="20dp"
                         android:background="@android:color/holo_red_dark"
                         android:text="Reschedule"
-
                         android:textAlignment="center" />
 
                 </RelativeLayout>
@@ -241,14 +234,69 @@
             </androidx.cardview.widget.CardView>
 
             <com.synnapps.carouselview.CarouselView
+                android:id="@+id/crd_promo"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="200dp"
                 android:layout_below="@id/crd_schedule"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp">
+                android:layout_marginRight="10dp"
+                app:fillColor="@android:color/holo_green_dark"
+                app:radius="6dp"
+                app:slideInterval="3000"
+                app:strokeColor="@android:color/white"
+                app:strokeWidth="1dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crd_information"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@id/crd_promo"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp"
+                android:hardwareAccelerated="false"
+                android:largeHeap="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
 
-            </com.synnapps.carouselview.CarouselView>
+                    <TextView
+                        android:id="@+id/lbl_title_information"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="What's new"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/lbl_description_information"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lbl_title_information"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="0dp"
+                        android:text="- Fix All Bugs in this world.\n- Add bugs to Fix Developer."
+                        android:textSize="15dp"
+
+                        />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/x"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@id/crd_information"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp">
+
+            </androidx.cardview.widget.CardView>
 
 
         </RelativeLayout>
