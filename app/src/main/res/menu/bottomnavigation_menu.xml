@@ -9,10 +9,15 @@
         android:icon="@drawable/ic_schedule"
         android:title="@string/schedule" />
 
+<!--    <item-->
+<!--        android:id="@+id/absent_menu"-->
+<!--        android:icon="@drawable/ic_qr_code"-->
+<!--        android:title="@string/absent" />-->
     <item
-        android:id="@+id/absent_menu"
-        android:icon="@drawable/ic_qr_code"
-        android:title="@string/absent" />
+        android:id="@+id/list_tutor_menu"
+        android:icon="@drawable/ic_tutor_me"
+        android:title="@string/tutorMe" />
+
     <item
         android:id="@+id/inbox_menu"
         android:icon="@drawable/ic_inbox"

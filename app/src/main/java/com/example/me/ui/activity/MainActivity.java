@@ -13,10 +13,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import com.example.me.R;
-import com.example.me.ui.fragment.Absent;
 import com.example.me.ui.fragment.Account;
 import com.example.me.ui.fragment.Home;
 import com.example.me.ui.fragment.Inbox;
+import com.example.me.ui.fragment.ListTutor;
 import com.example.me.ui.fragment.Schedule;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -40,11 +40,11 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         //TOOLBAR
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);
-        getSupportActionBar().setHomeButtonEnabled(true);
+//        toolbar = findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);
+//        getSupportActionBar().setHomeButtonEnabled(true);
 //        getSupportActionBar().setTitle("TWOH's Engineering");
 //        getSupportActionBar().setSubtitle("Tutorial Material Design");
 //        getSupportActionBar().setLogo(R.mipmap.ic_launcher);
@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity
         loadFragment(new Home());
         bottomNavigationView = findViewById(R.id.bn_main);
         bottomNavigationView.setOnNavigationItemSelectedListener((BottomNavigationView.OnNavigationItemSelectedListener) this);
+
 
 
 //        FloatingActionButton fab = findViewById(R.id.fab);
@@ -88,7 +89,6 @@ public class MainActivity extends AppCompatActivity
         }
 
     }
-
 
     //TOOLBAR
     @Override
@@ -131,8 +131,11 @@ public class MainActivity extends AppCompatActivity
             case R.id.schedule_menu:
                 fragment = new Schedule();
                 break;
-            case R.id.absent_menu:
-                fragment = new Absent();
+//            case R.id.absent_menu:
+//                fragment = new Absent();
+//                break;
+            case R.id.list_tutor_menu:
+                fragment = new ListTutor();
                 break;
             case R.id.inbox_menu:
                 fragment = new Inbox();

@@ -6,6 +6,15 @@
     android:orientation="vertical"
     tools:context=".ui.fragment.Schedule">
 
+    <SearchView
+        android:id="@+id/srcSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search Me :)"
+        android:layout_margin="10dp"
+        android:background="@drawable/style_search"/>
+
     <TextView
         android:id="@+id/fragmentAccount"
         android:layout_width="wrap_content"

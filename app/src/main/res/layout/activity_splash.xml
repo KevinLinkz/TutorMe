@@ -6,14 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.activity.SplashActivity"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_gravity="center">
 
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/splash_screen"/>
-
+<VideoView
+    android:id="@+id/splashScreen"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
 
 </LinearLayout>
