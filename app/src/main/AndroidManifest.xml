@@ -17,6 +17,13 @@
         tools:ignore="GoogleAppIndexingWarning"
         android:hardwareAccelerated="false"
         android:largeHeap="true">
+
+        <!--
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
+        Untuk Error Java.lang.OutOfMemory
+        -->
+
         <activity
             android:name=".ui.activity.SplashActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">

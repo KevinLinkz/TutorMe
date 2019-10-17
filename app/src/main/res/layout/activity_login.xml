@@ -11,10 +11,10 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:src="@drawable/splash_screen"
-        android:padding="20dp"
         android:layout_marginTop="80dp"
-        />
+        android:padding="20dp"
+        android:src="@drawable/splash_screen" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,53 +23,60 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:boxStrokeColor="@color/colorPrimary"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:textColorHint="@color/colorHint"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            app:boxStrokeColor="@color/colorPrimary">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtEmail"
-                android:hint="Email"/>
+                android:hint="Email" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:boxStrokeColor="@color/colorPrimary"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
             android:textColorHint="@color/colorHint"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            app:boxStrokeColor="@color/colorPrimary">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtPassword"
                 android:hint="Password"
-                android:inputType="textPassword"
-                />
+                android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/btnLogin"
-    android:background="@color/colorLogin"
-    android:text="Login"
-    android:textSize="20dp"
-    android:layout_marginLeft="50dp"
-    android:layout_marginRight="50dp"
-    />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:text="Login"
+            app:backgroundTint="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+            style="@style/Widget.MaterialComponents.Button"
+            android:textSize="20dp"
+            android:gravity="center"
+            />
+        <!-- Untuk masukin icon ke button
+            app:icon="@drawable/ic_wallet_transfer"
+            app:iconGravity="textStart"
+            app:iconTint="@android:color/holo_red_dark"
+            -->
 
         <!--    <TextView-->
         <!--        android:layout_width="wrap_content"-->

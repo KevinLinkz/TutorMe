@@ -21,7 +21,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/srcHome"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -82,19 +83,27 @@
                             <!--                        android:layout_height="match_parent"-->
                             <!--                        android:layout_alignParentRight="true"-->
                             <!--                        android:background="#429EE7" />-->
-
-                            <ImageView
+                            <com.google.android.material.button.MaterialButton
                                 android:id="@+id/wallet_transfer"
-                                android:layout_width="50dp"
-                                android:layout_height="40dp"
+                                style="@style/Widget.MaterialComponents.Button"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_centerInParent="true"
-                                android:src="@drawable/ic_wallet_transfer" />
+                                android:gravity="center"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                                app:backgroundTint="@android:color/transparent"
+                                app:icon="@drawable/ic_wallet_transfer"
+                                app:iconGravity="textStart"
+                                app:iconPadding="1dp"
+                                app:iconSize="@android:dimen/app_icon_size" />
 
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/wallet_transfer"
                                 android:layout_centerInParent="true"
+                                android:layout_marginTop="-18dp"
+                                android:gravity="center"
                                 android:text="Transfer"
                                 android:textColor="#ffffff"
                                 android:textSize="15dp"
@@ -113,18 +122,27 @@
                             <!--                        android:layout_height="match_parent"-->
                             <!--                        android:layout_alignParentRight="true"-->
                             <!--                        android:background="#429EE7" />-->
-                            <ImageView
+                            <com.google.android.material.button.MaterialButton
                                 android:id="@+id/wallet_top_up"
-                                android:layout_width="50dp"
-                                android:layout_height="40dp"
+                                style="@style/Widget.MaterialComponents.Button"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_centerInParent="true"
-                                android:src="@drawable/ic_wallet_top_up" />
+                                android:gravity="center"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                                app:backgroundTint="@android:color/transparent"
+                                app:icon="@drawable/ic_wallet_top_up"
+                                app:iconGravity="textStart"
+                                app:iconPadding="1dp"
+                                app:iconSize="@android:dimen/app_icon_size" />
 
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/wallet_top_up"
                                 android:layout_centerInParent="true"
+                                android:layout_marginTop="-18dp"
+                                android:gravity="center"
                                 android:text="Top-Up"
                                 android:textColor="#ffffff"
                                 android:textSize="15dp"
@@ -138,18 +156,27 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1">
 
-                            <ImageView
+                            <com.google.android.material.button.MaterialButton
                                 android:id="@+id/wallet_point"
-                                android:layout_width="50dp"
-                                android:layout_height="40dp"
+                                style="@style/Widget.MaterialComponents.Button"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_centerInParent="true"
-                                android:src="@drawable/ic_account_wallet" />
+                                android:gravity="center"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                                app:backgroundTint="@android:color/transparent"
+                                app:icon="@drawable/ic_account_wallet"
+                                app:iconGravity="textStart"
+                                app:iconPadding="1dp"
+                                app:iconSize="@android:dimen/app_icon_size" />
 
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/wallet_point"
                                 android:layout_centerInParent="true"
+                                android:layout_marginTop="-18dp"
+                                android:gravity="center"
                                 android:text="Point"
                                 android:textColor="#ffffff"
                                 android:textSize="15dp"
@@ -206,29 +233,37 @@
                         android:text="2-4 PM"
                         android:textSize="18dp" />
 
-                    <Button
+
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/btn_attendance"
-                        android:layout_width="100dp"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_marginTop="10dp"
-                        android:layout_marginRight="20dp"
-                        android:background="@android:color/holo_green_dark"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
                         android:text="Attendance"
-                        android:textAlignment="center" />
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                        android:textColor="@android:color/black"
+                        android:textSize="12dp"
+                        app:backgroundTint="@android:color/holo_green_dark" />
 
-                    <Button
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/btn_reschedule"
-                        android:layout_width="100dp"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/btn_attendance"
                         android:layout_alignParentRight="true"
                         android:layout_marginTop="5dp"
-                        android:layout_marginRight="20dp"
-                        android:background="@android:color/holo_red_dark"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
                         android:text="Reschedule"
-                        android:textAlignment="center" />
-
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                        android:textColor="@android:color/black"
+                        android:textSize="12dp"
+                        app:backgroundTint="@android:color/holo_red_dark" />
                 </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
@@ -240,7 +275,7 @@
                 android:layout_below="@id/crd_schedule"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                app:fillColor="@android:color/holo_green_dark"
+                app:fillColor="@color/colorPrimary"
                 app:radius="6dp"
                 app:slideInterval="3000"
                 app:strokeColor="@android:color/white"
@@ -252,9 +287,9 @@
                 android:layout_height="120dp"
                 android:layout_below="@id/crd_promo"
                 android:layout_margin="10dp"
-                app:cardCornerRadius="20dp"
                 android:hardwareAccelerated="false"
-                android:largeHeap="true">
+                android:largeHeap="true"
+                app:cardCornerRadius="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -291,7 +326,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/x"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="80dp"
                 android:layout_below="@id/crd_information"
                 android:layout_margin="10dp"
                 app:cardCornerRadius="20dp">
