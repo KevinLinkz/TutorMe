@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.me.dao.PERMISSION_ACCESS;
+import com.example.me.dao.general.PERMISSION_ACCESS;
 import com.google.zxing.Result;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;

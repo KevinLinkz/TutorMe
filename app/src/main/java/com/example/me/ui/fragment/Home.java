@@ -22,11 +22,11 @@ import com.synnapps.carouselview.ImageListener;
  */
 public class Home extends Fragment {
     private int[] mImages = new int[]{
-            R.raw.image5,
             R.raw.image1,
             R.raw.image2,
             R.raw.image3,
-            R.raw.image4
+            R.raw.image4,
+            R.raw.image5
     };
     private String[] mTitle = new String[]{
             "Buah1",
@@ -49,7 +49,7 @@ public class Home extends Fragment {
         root = (ViewGroup) inflater.inflate(R.layout.fragment_home, null);
 
         //SEARCH VIEW
-        SearchView searchView = root.findViewById(R.id.srcHome);
+        SearchView searchView = root.findViewById(R.id.srcMain);
         searchView.setFocusable(false);
 
 

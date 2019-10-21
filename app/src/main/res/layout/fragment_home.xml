@@ -9,7 +9,7 @@
     tools:context=".ui.fragment.Home">
 
     <SearchView
-        android:id="@+id/srcHome"
+        android:id="@+id/srcMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -20,13 +20,14 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/srcHome"
+        android:layout_below="@+id/srcMain"
         android:fillViewport="true"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="true"
+        android:scrollbars="none">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
@@ -51,9 +52,11 @@
 
                         <ImageView
                             android:id="@+id/bca_wallet"
-                            android:layout_width="wrap_content"
+                            android:layout_width="45dp"
                             android:layout_height="match_parent"
-                            android:src="@mipmap/im_wallet" />
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/im_wallet" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -315,9 +318,7 @@
                         android:layout_marginTop="0dp"
                         android:text="- Fix All Bugs in this world.\n- Add bugs to Fix Developer."
                         android:textSize="15dp"
-
                         />
-
 
                 </RelativeLayout>
 
@@ -326,9 +327,9 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/x"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="20dp"
                 android:layout_below="@id/crd_information"
-                android:layout_margin="10dp"
+                android:layout_marginTop="40dp"
                 app:cardCornerRadius="20dp">
 
             </androidx.cardview.widget.CardView>

@@ -11,8 +11,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.me.R;
-import com.example.me.dao.Comment;
-import com.example.me.dao.Post;
+import com.example.me.dao.api.Comment;
+import com.example.me.dao.api.Post;
 import com.example.me.network.connectorAPI.ConnectorFinhackAPI;
 import com.example.me.network.connectorAPI.JSONPlaceHolderAPI;
 import com.example.me.network.retrofit.MyRetrofit;

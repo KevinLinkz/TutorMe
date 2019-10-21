@@ -1,4 +1,4 @@
-package com.example.me.dao;
+package com.example.me.dao.api;
 
 import com.google.gson.annotations.SerializedName;
 

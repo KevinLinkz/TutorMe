@@ -1,4 +1,4 @@
-package com.example.me.dao;
+package com.example.me.dao.general;
 
 import android.Manifest;
 import android.content.pm.PackageManager;

@@ -1,7 +1,7 @@
 package com.example.me.network.connectorAPI;
 
-import com.example.me.dao.Comment;
-import com.example.me.dao.Post;
+import com.example.me.dao.api.Comment;
+import com.example.me.dao.api.Post;
 
 import java.util.List;
 import java.util.Map;
