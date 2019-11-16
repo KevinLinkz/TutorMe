@@ -50,7 +50,6 @@
             app:menu="@menu/bottomnavigation_menu" />
 
     </RelativeLayout>
-    <!-- TODO: Update blank fragment layout -->
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"

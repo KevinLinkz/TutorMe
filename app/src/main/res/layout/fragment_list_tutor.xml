@@ -1,25 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_inbox_layout"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.ListTutor">
+    tools:context=".ui.fragment.Inbox">
+
     <SearchView
-        android:id="@+id/srcListTutor"
+        android:id="@+id/srcMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:iconifiedByDefault="false"
-        android:queryHint="Search Me :)"
         android:layout_margin="10dp"
-        android:background="@drawable/style_search"/>
+        android:background="@drawable/style_search"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search Me :)" />
+
+<RelativeLayout
+    android:id="@+id/revFilter"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_below="@id/srcMain">
 
     <TextView
-        android:id="@+id/fragmentAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="@string/tutorMe"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:id="@+id/txtSort"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:text="Sort : "
+        android:textSize="15dp"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        />
+    <Spinner
+        android:id="@+id/spnSort"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/txtSort"
+        android:textAlignment="gravity"
+        android:gravity="center"
+        android:background="@drawable/gradient_spinner"
+
+        />
+
+    <TextView
+        android:id="@+id/txtFilterBy"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="Filter By : "
+        android:textSize="15dp"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/spnFilterBy"
+        android:textStyle="bold"
+
+        />
+    <Spinner
+        android:id="@+id/spnFilterBy"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:textAlignment="gravity"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/gradient_spinner"
+
+        />
+
+</RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcyTutor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/revFilter"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        android:layout_marginBottom="60dp"
+        />
+
 
 
 </RelativeLayout>
+
+    <!--Gap on Bottom Navigation-->
+
+    <!--            <androidx.cardview.widget.CardView-->
+    <!--                android:id="@+id/x"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="20dp"-->
+    <!--                android:layout_below="@id/crd_information"-->
+    <!--                android:layout_marginTop="40dp"-->
+    <!--                app:cardCornerRadius="20dp">-->
+
+    <!--            </androidx.cardview.widget.CardView>-->

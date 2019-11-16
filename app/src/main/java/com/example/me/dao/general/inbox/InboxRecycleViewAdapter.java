@@ -16,8 +16,6 @@ import java.util.ArrayList;
 public class InboxRecycleViewAdapter extends RecyclerView.Adapter<InboxRecycleViewAdapter.InboxViewHolder> {
     public ArrayList<InboxItem> inboxItems;
 
-
-
     public static class InboxViewHolder extends RecyclerView.ViewHolder{
         public ImageView imgInbox;
         public TextView txtTitleInbox;

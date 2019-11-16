@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="2dp"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:id="@+id/lblRatings"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgProfile"
+            android:layout_marginLeft="20dp"
+            android:text="4.5"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/ic_star"
+            />
+
+        <TextView
+            android:id="@+id/lblReviews"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblRatings"
+            android:text="(3 Reviews)"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/lblName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imgProfile"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="10dp"
+            android:text="Name"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imgProfile"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:text="Name"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/lblSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblName"
+            android:layout_toEndOf="@+id/imgProfile"
+            android:text="List Subject"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/lblPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblSubject"
+            android:layout_toEndOf="@+id/imgProfile"
+            android:layout_marginLeft="10dp"
+            android:text="Price"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnProfile"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/lblRatings"
+            android:layout_below="@+id/lblPrice"
+            android:gravity="center"
+            android:text="View Profile"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+            android:textColor="@android:color/black"
+            android:textSize="12dp"
+            app:backgroundTint="@android:color/holo_blue_bright" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBook"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/btnProfile"
+            android:layout_below="@+id/lblPrice"
+            android:gravity="center"
+            android:text="Book"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+            android:textColor="@android:color/black"
+            android:textSize="12dp"
+            app:backgroundTint="@android:color/holo_red_dark" />
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

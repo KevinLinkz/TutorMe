@@ -1,17 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ui.fragment.Account">
 
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crdProfile"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_blue_light">
+
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/im_profile_round" />
+
+            <TextView
+                android:id="@+id/lblNameProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgProfile"
+                android:text="Kevin Hertanto"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lblEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblNameProfile"
+                android:text="KevinHertanto12@gmail.com"
+                android:textAlignment="center"
+                android:textSize="18dp" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
     <TextView
-        android:id="@+id/fragmentAccount"
-        android:layout_width="wrap_content"
+        android:id="@+id/lblPromo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="@string/profile"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:layout_below="@+id/crdProfile"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/ic_cupon"
+        android:drawablePadding="20dp"
+        android:text="Enter Promo Code"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/lblVoucher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblPromo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_vouchers"
+        android:drawablePadding="20dp"
+        android:text="My Vouchers"
+        android:textSize="16dp" />
+
+    <View
+        android:id="@+id/lneVoucher"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentRight="true"
+        android:background="#429EE7"
+        android:layout_below="@+id/lblVoucher"/>
+
+    <TextView
+        android:id="@+id/lblTermsOfService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lneVoucher"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_doc"
+        android:drawablePadding="20dp"
+        android:text="Terms of Service"
+        android:textSize="16dp" />
+
+
+
+    <TextView
+        android:id="@+id/lblPrivacyPolicy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblTermsOfService"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_privacy_policy"
+        android:drawablePadding="20dp"
+        android:text="Privacy Policy"
+        android:textSize="16dp" />
+
+
+    <TextView
+        android:id="@+id/lblRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblPrivacyPolicy"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_star"
+        android:drawablePadding="20dp"
+        android:text="Rate Tutor Me App"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/lblLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblRate"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_exit"
+        android:drawablePadding="20dp"
+        android:text="Logout"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16dp"
+        />
+
+
+
+
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/fragmentAccount"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:text="@string/profile"-->
+    <!--        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />-->
 
 </RelativeLayout>

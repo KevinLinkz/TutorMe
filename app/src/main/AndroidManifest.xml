@@ -3,38 +3,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.me">
 
-    <uses-permission android:name="android.permission.PERMISSION_NAME"/>
+    <uses-permission android:name="android.permission.PERMISSION_NAME" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning"
-        android:hardwareAccelerated="false"
-        android:largeHeap="true">
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ui.activity.Receipt"></activity>
+        <activity android:name=".ui.activity.GoogleMap" />
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
+
+        <activity android:name=".ui.activity.PinWallet" /> <!-- <activity android:name=".ui.activity.BookingSchedule"></activity> -->
         <!--
         android:hardwareAccelerated="false"
         android:largeHeap="true"
         Untuk Error Java.lang.OutOfMemory
         -->
-
+        <activity android:name=".dao.calendar.BasicActivity" />
+        <activity android:name=".ui.activity.ProfileDetail" />
+        <activity
+            android:name=".ui.activity.PopUpBookingSchedule"
+            android:theme="@style/AppTheme.PopUp" />
         <activity
             android:name=".ui.activity.SplashActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".ui.activity.SignUpActivity" />
-        <activity android:name=".ui.activity.LoginActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".ui.activity.ScanBarcode"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activity.SuccessAttendance"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.activity.SuccessPay"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.activity.MainActivity"
             android:label="@string/app_name"
@@ -43,7 +67,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
-
         </activity>
     </application>
 

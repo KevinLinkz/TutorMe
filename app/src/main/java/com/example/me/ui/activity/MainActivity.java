@@ -13,11 +13,14 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import com.example.me.R;
+import com.example.me.dao.general.MyConstanta;
 import com.example.me.ui.fragment.Account;
 import com.example.me.ui.fragment.Home;
 import com.example.me.ui.fragment.Inbox;
 import com.example.me.ui.fragment.ListTutor;
 import com.example.me.ui.fragment.Schedule;
+import com.example.me.ui.fragment.WalletHistory;
+import com.example.me.ui.fragment.WalletTopUp;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
@@ -31,13 +34,38 @@ public class MainActivity extends AppCompatActivity
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle toggle;
     private NavigationView navigationView;
-
-
+    private Bundle bundle = new Bundle();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Bundle bundle = new Bundle();
+        bundle = getIntent().getExtras();
+        if (bundle != null) {
+            String strTemp = bundle.getString("Fragment");
+            switch (strTemp) {
+                case "TopUp":
+                    loadFragment(new WalletTopUp());
+                    break;
+                case "History":
+                    loadFragment(new WalletHistory());
+                    break;
+                default:
+
+                    break;
+            }
+        }else{
+//            loadFragment(new WalletHistory());
+            loadFragment(new Home(MyConstanta.isParent));
+        }
+//        if (getIntent().getExtras() == null){
+//            MyConstanta.isParent = false;
+//        }else{
+//            bundle = getIntent().getExtras();
+//            MyConstanta.isParent = bundle.getBoolean("isParent");
+//        }
+
         //TOOLBAR
 //        toolbar = findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
@@ -60,11 +88,10 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
 
         //BOTTOM NAVIGAITON
-        loadFragment(new Home());
         bottomNavigationView = findViewById(R.id.bn_main);
         bottomNavigationView.setOnNavigationItemSelectedListener((BottomNavigationView.OnNavigationItemSelectedListener) this);
 
-
+        //BUTTON
 
 //        FloatingActionButton fab = findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -80,10 +107,10 @@ public class MainActivity extends AppCompatActivity
 
     //NAVIGATION
     @Override
-    public void onBackPressed(){
-        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
-        }else{
+        } else {
             super.onBackPressed();
         }
 
@@ -104,14 +131,14 @@ public class MainActivity extends AppCompatActivity
 //        // as you specify a parent activity in AndroidManifest.xml.
 
         //noinspection SimplifiableIfStatement
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
 
             case R.id.action_settings:
                 return true;
             case R.id.action_notifications:
                 return true;
             default:
-                return toggle.onOptionsItemSelected(item)||super.onOptionsItemSelected(item);
+                return toggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
 
         }
 
@@ -125,7 +152,7 @@ public class MainActivity extends AppCompatActivity
         switch (menuItem.getItemId()) {
             //BOTTOM NAVIGATION
             case R.id.home_menu:
-                fragment = new Home();
+                fragment = new Home(MyConstanta.isParent);
                 break;
             case R.id.schedule_menu:
                 fragment = new Schedule();
@@ -143,7 +170,7 @@ public class MainActivity extends AppCompatActivity
                 fragment = new Account();
                 break;
             //SIDEBAR NAVIGATION
-            case R.id.nav_message:
+            case R.id.nav_favorite:
                 fragment = new Inbox();
                 navigationView.setCheckedItem(R.id.nav_message);
                 drawerLayout.closeDrawer(GravityCompat.START);
@@ -157,7 +184,7 @@ public class MainActivity extends AppCompatActivity
         return loadFragment(fragment);
     }
 
-    private boolean loadFragment(Fragment fragment) {
+    public boolean loadFragment(Fragment fragment) {
         if (fragment != null) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.flContainer, fragment)
@@ -166,7 +193,6 @@ public class MainActivity extends AppCompatActivity
         }
         return false;
     }
-
 
 
 }

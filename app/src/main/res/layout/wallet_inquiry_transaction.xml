@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="2dp"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/lblDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date = "
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="15dp"
+            />
+        <ImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_circle_black"
+            android:layout_toRightOf="@id/lblDate"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"/>
+
+        <TextView
+            android:id="@+id/lblAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount"
+            android:layout_toRightOf="@+id/imgIcon"
+            android:layout_marginTop="3dp"
+            android:textStyle="bold"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:id="@+id/lblTransactionType"
+            android:layout_below="@id/lblAmount"
+            android:layout_toRightOf="@+id/imgIcon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transaction Type"
+            android:textSize="15dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:id="@+id/lblDescription"
+            android:layout_below="@id/lblTransactionType"
+            android:layout_toRightOf="@+id/imgIcon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transaction Type"
+            android:textSize="15dp"
+            android:layout_marginRight="10dp"
+            />
+
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/lbl1"-->
+<!--            android:layout_below="@+id/lbl0"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Transaction ID              = "-->
+<!--            android:textSize="18dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:id="@+id/lbl2"-->
+<!--            android:layout_below="@id/lbl1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Account Statement ID = "-->
+<!--            android:textSize="18dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:id="@+id/lbl3"-->
+<!--            android:layout_below="@id/lbl2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Transaction Date          ="-->
+<!--            android:textSize="18dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/lbl4"-->
+<!--            android:layout_below="@id/lbl3"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Transaction Type          ="-->
+<!--            android:textSize="18dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            />-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/lbl5"-->
+<!--            android:layout_below="@id/lbl4"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Amount                          = "-->
+<!--            android:textSize="18dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            />-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/lbl6"-->
+<!--            android:layout_below="@id/lbl5"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Description                    = "-->
+<!--            android:textSize="18dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            />-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/lbl7"-->
+<!--            android:layout_below="@id/lbl6"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Current Balance            = "-->
+<!--            android:textSize="18dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            />-->
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

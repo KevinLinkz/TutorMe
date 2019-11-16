@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="2dp"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="100dp"
+            android:layout_height="115dp"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:id="@+id/lblName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imgProfile"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="10dp"
+            android:text="Name"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+
+        <TextView
+            android:id="@+id/lblID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imgProfile"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:text="Name"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/lblSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblName"
+            android:layout_toEndOf="@+id/imgProfile"
+            android:text="List Subject"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/lblDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblSubject"
+            android:layout_toEndOf="@+id/imgProfile"
+            android:layout_marginLeft="5dp"
+            android:text="Date"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:drawableLeft="@drawable/ic_date"
+            android:drawablePadding="5dp"
+            />
+        <TextView
+            android:id="@+id/lblTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblDate"
+            android:layout_toEndOf="@+id/imgProfile"
+            android:layout_marginLeft="5dp"
+            android:text="Time"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:drawableLeft="@drawable/ic_time"
+            android:drawablePadding="5dp"
+            />
+        <TextView
+            android:id="@+id/lblLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblTime"
+            android:layout_toEndOf="@+id/imgProfile"
+            android:layout_marginLeft="5dp"
+            android:text="Location"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:drawableLeft="@drawable/ic_location"
+            android:drawablePadding="5dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnProfile"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/imgProfile"
+            android:layout_below="@+id/lblLocation"
+            android:gravity="center"
+            android:text="Help"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+            android:textColor="@android:color/black"
+            android:textSize="12dp"
+            app:backgroundTint="@android:color/holo_blue_bright" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBook"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/btnProfile"
+            android:layout_below="@+id/lblLocation"
+            android:gravity="center"
+            android:text="Details"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+            android:textColor="@android:color/black"
+            android:textSize="12dp"
+            app:backgroundTint="@android:color/holo_red_dark" />
+
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

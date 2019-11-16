@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,20 +8,53 @@
     tools:context=".ui.fragment.Schedule">
 
     <SearchView
-        android:id="@+id/srcSchedule"
+        android:id="@+id/srcHome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:iconifiedByDefault="false"
-        android:queryHint="Search Me :)"
         android:layout_margin="10dp"
-        android:background="@drawable/style_search"/>
+        android:background="@drawable/style_search"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search Me :)" />
 
-    <TextView
-        android:id="@+id/fragmentAccount"
-        android:layout_width="wrap_content"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabSchedule"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="@string/schedule"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:layout_below="@+id/srcHome">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabPending"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:icon="@drawable/ic_pending"
+            android:text="Pending" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabUpcoming"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:icon="@drawable/ic_upcoming"
+            android:text="Upcoming" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:icon="@drawable/ic_history"
+            android:text="History" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcySchedule"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabSchedule"
+        android:layout_marginBottom="60dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:scrollbars="vertical" />
 
 </RelativeLayout>
+
+
